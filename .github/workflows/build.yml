@@ -46,6 +46,7 @@ jobs:
           cp custom-splash/drawable-land-hdpi.png android/app/src/main/res/drawable-land-hdpi/splash.png
           cp custom-splash/drawable-land-xdpi.png android/app/src/main/res/drawable-land-xhdpi/splash.png
           cp custom-splash/drawable-land-xxhdpi.png android/app/src/main/res/drawable-land-xxhdpi/splash.png
+          cp custom-splash/drawable-port-xxhdpi.png android/app/src/main/res/drawable/splash.png
 
       - name: Ensure assets folder exists
         run: mkdir -p android/app/src/main/assets
