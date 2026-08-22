@@ -35,8 +35,17 @@ jobs:
             cp custom-icons/mipmap-$dir/*.png android/app/src/main/res/mipmap-$dir/
           done
 
-      - name: Ensure assets folder exists
-        run: mkdir -p android/app/src/main/assets
+      - name: Copy custom splash screens
+        run: |
+          mkdir -p android/app/src/main/res/drawable-port-mdpi android/app/src/main/res/drawable-port-hdpi android/app/src/main/res/drawable-port-xhdpi android/app/src/main/res/drawable-port-xxhdpi android/app/src/main/res/drawable-land-mdpi android/app/src/main/res/drawable-land-hdpi android/app/src/main/res/drawable-land-xhdpi android/app/src/main/res/drawable-land-xxhdpi
+          cp custom-splash/drawable-port-mdpi.png android/app/src/main/res/drawable-port-mdpi/splash.png
+          cp custom-splash/drawable-port-hdpi.png android/app/src/main/res/drawable-port-hdpi/splash.png
+          cp custom-splash/drawable-port-xhdpi.png android/app/src/main/res/drawable-port-xhdpi/splash.png
+          cp custom-splash/drawable-port-xxhdpi.png android/app/src/main/res/drawable-port-xxhdpi/splash.png
+          cp custom-splash/drawable-land-mdpi.png android/app/src/main/res/drawable-land-mdpi/splash.png
+          cp custom-splash/drawable-land-hdpi.png android/app/src/main/res/drawable-land-hdpi/splash.png
+          cp custom-splash/drawable-land-xdpi.png android/app/src/main/res/drawable-land-xhdpi/splash.png
+          cp custom-splash/drawable-land-xxhdpi.png android/app/src/main/res/drawable-land-xxhdpi/splash.png
 
       - name: Ensure assets folder exists
         run: mkdir -p android/app/src/main/assets
