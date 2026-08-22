@@ -1,0 +1,12 @@
+{
+  "appId": "com.aayan.sakhi",
+  "appName": "Sakhi",
+  "webDir": "www",
+  "server": {
+    "url": "https://sakhi-chatbot-546613952089.asia-southeast1.run.app",
+    "cleartext": false
+  },
+  "android": {
+    "allowMixedContent": false
+  }
+}
