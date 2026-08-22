@@ -29,6 +29,15 @@ jobs:
       - name: Add Android platform
         run: npx cap add android
 
+      - name: Copy custom app icons
+        run: |
+          for dir in mdpi hdpi xhdpi xxhdpi; do
+            cp custom-icons/mipmap-$dir/*.png android/app/src/main/res/mipmap-$dir/
+          done
+
+      - name: Ensure assets folder exists
+        run: mkdir -p android/app/src/main/assets
+
       - name: Ensure assets folder exists
         run: mkdir -p android/app/src/main/assets
 
