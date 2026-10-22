@@ -3,8 +3,9 @@
   "appName": "Sakhi",
   "webDir": "www",
   "server": {
-    "url": "https://sakhi-chatbot-546613952089.asia-southeast1.run.app",
-    "cleartext": false
+    "url": "https://mraayanshaikh37.github.io/sakhi-chatbot-/",
+    "cleartext": false,
+    "allowNavigation": ["mraayanshaikh37.github.io"]
   },
   "android": {
     "allowMixedContent": false
