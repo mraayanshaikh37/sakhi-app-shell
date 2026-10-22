@@ -28,7 +28,10 @@ jobs:
 
       - name: Add Android platform
         run: npx cap add android
-
+      - name: Add location permissions
+        run: |
+          sed -i 's#</manifest>#    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />\n    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />\n</manifest>#' android/app/src/main/AndroidManifest.xml
+          grep -n "LOCATION" android/app/src/main/AndroidManifest.xml
       - name: Copy custom app icons
         run: |
           for dir in mdpi hdpi xhdpi xxhdpi; do
